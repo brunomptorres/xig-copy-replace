@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "XIG Copy Replace",
+  "version": "1.0",
+  "description": "Replaces copied links from Instagram and X (Twitter), to use InstaFix and FxEmbed.",
+  "icons": {
+    "48": "icons/logo-48.png"
+  },
+  "permissions": ["clipboardWrite"],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.instagram.com/*",
+        "*://*.x.com/*",
+        "*://*.twitter.com/*"
+      ],
+      "js": ["index.js"]
+    }
+  ]
+}
