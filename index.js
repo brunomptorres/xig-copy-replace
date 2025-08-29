@@ -1,5 +1,5 @@
 const preferedDomains = {
-  instagram: "uuinstagram.com",
+  instagram: "instagramez.com",
   twitter: "fxtwitter.com",
 };
 function modifyClipboard(event) {
