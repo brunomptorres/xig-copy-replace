@@ -1,5 +1,5 @@
 const preferedDomains = {
-  instagram: "instagramez.com",
+  instagram: "g.embedez.com",
   twitter: "fxtwitter.com",
 };
 function modifyClipboard(event) {
@@ -20,7 +20,7 @@ function modifyClipboard(event) {
 
   if (clipboardText.includes("instagram.com")) {
     modifiedText = clipboardText
-      .replace(/(?:instagram)\.com/g, preferedDomains.instagram)
+      .replace(/((?:www)\.)?(?:instagram)\.com/g, preferedDomains.instagram)
       .replace(/\?.*$/, "");
   }
 
