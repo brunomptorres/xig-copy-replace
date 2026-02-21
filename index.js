@@ -1,5 +1,5 @@
-const preferedDomains = {
-  instagram: "kkinstagram.com",
+const preferredDomains = {
+  instagram: "instafix.zzinstagram.com",
   twitter: "fxtwitter.com",
 };
 function modifyClipboard(event) {
@@ -20,7 +20,7 @@ function modifyClipboard(event) {
 
   if (clipboardText.includes("instagram.com")) {
     modifiedText = clipboardText
-      .replace(/((?:www)\.)?(?:instagram)\.com/g, preferedDomains.instagram)
+      .replace(/((?:www)\.)?(?:instagram)\.com/g, preferredDomains.instagram)
       .replace(/\?.*$/, "");
   }
 
@@ -29,14 +29,16 @@ function modifyClipboard(event) {
     clipboardText.includes("twitter.com")
   ) {
     modifiedText = clipboardText
-      .replace(/(?:twitter|x)\.com/g, preferedDomains.twitter)
+      .replace(/(?:twitter|x)\.com/g, preferredDomains.twitter)
       .replace(/\?.*$/, "");
   }
 
+  const finalClipboardText = modifiedText ?? clipboardText;
+
   navigator.clipboard
-    .writeText(modifiedText)
+    .writeText(finalClipboardText)
     .then(() => {
-      console.log("Successfully modified clipboard: " + modifiedText);
+      console.log("Successfully modified clipboard: " + finalClipboardText);
     })
     .catch((error) => {
       console.error("Failed to modify clipboard: " + error);

@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "XIG Copy Replace",
-  "version": "1.5",
-  "description": "Replaces copied links from Instagram and X (Twitter), to use kkinstagram and FxEmbed.",
+  "version": "1.6",
+  "description": "Replaces copied links from Instagram and X (Twitter), to use InstaFix (zzinstagram) and FxEmbed (fxtwitter).",
   "icons": {
     "16": "icons/logo-16.png",
     "32": "icons/logo-32.png",
